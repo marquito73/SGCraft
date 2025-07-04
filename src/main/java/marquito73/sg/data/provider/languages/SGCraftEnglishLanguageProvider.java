@@ -37,5 +37,8 @@ public class SGCraftEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockInit.NAQUADAH_BLOCK, "Block of Naquadah");
         translationBuilder.add(BlockInit.OVERWORLD_NAQUADAH_ORE, "Naquadah Ore");
         translationBuilder.add(BlockInit.DEEPSLATE_NAQUADAH_ORE, "Naquadah Deepslate Ore");
+        translationBuilder.add(BlockInit.STARGATE_RING, "Stargate Ring Block");
+        translationBuilder.add(BlockInit.STARGATE_CHEVRON, "Stargate Chevron Block");
+        translationBuilder.add(BlockInit.STARGATE_BASE, "Stargate Base Block");
     }
 }

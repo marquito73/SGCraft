@@ -17,6 +17,9 @@ public class SGCraftBlockTagProvider extends FabricTagProvider.BlockTagProvider 
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         this.getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(BlockInit.NAQUADAH_BLOCK)
+                .add(BlockInit.STARGATE_RING)
+                .add(BlockInit.STARGATE_CHEVRON)
+                .add(BlockInit.STARGATE_BASE)
                 .add(BlockInit.OVERWORLD_NAQUADAH_ORE);
 
         this.getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -24,6 +27,9 @@ public class SGCraftBlockTagProvider extends FabricTagProvider.BlockTagProvider 
 
         this.getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(BlockInit.NAQUADAH_BLOCK)
+                .add(BlockInit.STARGATE_RING)
+                .add(BlockInit.STARGATE_CHEVRON)
+                .add(BlockInit.STARGATE_BASE)
                 .add(BlockInit.OVERWORLD_NAQUADAH_ORE)
                 .add(BlockInit.DEEPSLATE_NAQUADAH_ORE);
     }

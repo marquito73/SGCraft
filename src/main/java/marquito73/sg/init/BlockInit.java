@@ -1,7 +1,9 @@
 package marquito73.sg.init;
 
 import marquito73.sg.SGCraft;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import marquito73.sg.blocks.StargateBaseBlock;
+import marquito73.sg.blocks.StargateChevronBlock;
+import marquito73.sg.blocks.StargateRingBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -33,6 +35,14 @@ public class BlockInit {
                     .strength(4.5F, 3F)
                     .requiresTool()
                     .mapColor(MapColor.STONE_GRAY)));
+
+    // Stargate
+
+    public static final StargateRingBlock STARGATE_RING = registerWithItem("stargate_ring", new StargateRingBlock());
+
+    public static final StargateChevronBlock STARGATE_CHEVRON = registerWithItem("stargate_chevron", new StargateChevronBlock());
+
+    public static final StargateBaseBlock STARGATE_BASE = registerWithItem("stargate_base", new StargateBaseBlock());
 
     public static void load() {
 
