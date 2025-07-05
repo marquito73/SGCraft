@@ -31,8 +31,24 @@ public class SGCraftEnglishLanguageProvider extends FabricLanguageProvider {
         // Item groups
         this.addText(translationBuilder, ItemGroupInit.STARGATE_TITLE, "Stargate");
         // Items
+
+        // Naquadah
         translationBuilder.add(ItemInit.NAQUADAH_INGOT, "Naquadah Ingot");
         translationBuilder.add(ItemInit.NAQUADAH_RAW, "Naquadah Raw");
+
+        // Crystal
+        translationBuilder.add(ItemInit.STARGATE_CORE_CRYSTAL, "Stargate Core Crystal");
+        translationBuilder.add(ItemInit.STARGATE_CONTROLLER_CRYSTAL, "Stargate Controller Crystal");
+        translationBuilder.add(ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL, "Pegasus Upgrade Cystal");
+
+        // Chevron upgade
+        translationBuilder.add(ItemInit.STARGATE_CHEVRON_UPGRADE, "Stargate Chevron Upgrade");
+
+        // Iris
+        translationBuilder.add(ItemInit.STARGATE_IRIS_BLADE, "Stargate Iris Blade");
+        translationBuilder.add(ItemInit.STARGATE_IRIS_UPGRADE, "Stargate Iris Upgrade");
+
+
         // Blocks
         translationBuilder.add(BlockInit.NAQUADAH_BLOCK, "Block of Naquadah");
         translationBuilder.add(BlockInit.NAQUADAH_ORE, "Naquadah Ore");

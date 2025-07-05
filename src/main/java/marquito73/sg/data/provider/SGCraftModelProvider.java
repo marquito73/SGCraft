@@ -57,5 +57,14 @@ public class SGCraftModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ItemInit.NAQUADAH_INGOT, Models.GENERATED);
         itemModelGenerator.register(ItemInit.NAQUADAH_RAW, Models.GENERATED);
+
+        itemModelGenerator.register(ItemInit.STARGATE_CORE_CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(ItemInit.STARGATE_CONTROLLER_CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL, Models.GENERATED);
+
+        itemModelGenerator.register(ItemInit.STARGATE_CHEVRON_UPGRADE, Models.GENERATED);
+
+        itemModelGenerator.register(ItemInit.STARGATE_IRIS_BLADE, Models.GENERATED);
+        itemModelGenerator.register(ItemInit.STARGATE_IRIS_UPGRADE, Models.GENERATED);
     }
 }
