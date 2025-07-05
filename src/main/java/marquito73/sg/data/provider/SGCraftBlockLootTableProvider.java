@@ -21,8 +21,8 @@ public class SGCraftBlockLootTableProvider extends FabricBlockLootTableProvider 
         this.addDrop(BlockInit.STARGATE_CHEVRON);
         this.addDrop(BlockInit.STARGATE_BASE);
 
-        this.addDrop(BlockInit.OVERWORLD_NAQUADAH_ORE,
-                this.oreDrops(BlockInit.OVERWORLD_NAQUADAH_ORE, ItemInit.NAQUADAH_RAW));
+        this.addDrop(BlockInit.NAQUADAH_ORE,
+                this.oreDrops(BlockInit.NAQUADAH_ORE, ItemInit.NAQUADAH_RAW));
 
         this.addDrop(BlockInit.DEEPSLATE_NAQUADAH_ORE,
                 this.oreDrops(BlockInit.DEEPSLATE_NAQUADAH_ORE, ItemInit.NAQUADAH_RAW));

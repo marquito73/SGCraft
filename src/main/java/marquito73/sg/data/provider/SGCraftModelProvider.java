@@ -18,7 +18,7 @@ public class SGCraftModelProvider extends FabricModelProvider {
 
         // Ores
 
-        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.OVERWORLD_NAQUADAH_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.NAQUADAH_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DEEPSLATE_NAQUADAH_ORE);
 
         // Stargate

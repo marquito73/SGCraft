@@ -10,6 +10,10 @@ public class BiomeModificationInit {
         BiomeModifications.addFeature(
                 BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES,
-                PlacedFeatureInit.OVERWORLD_NAQUADAH_ORE_KEY);
+                PlacedFeatureInit.NAQUADAH_ORE_KEY);
+        BiomeModifications.addFeature(
+                BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                PlacedFeatureInit.DEEPSLATE_NAQUADAH_ORE_KEY);
     }
 }

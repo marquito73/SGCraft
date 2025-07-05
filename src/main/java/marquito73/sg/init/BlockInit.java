@@ -22,7 +22,7 @@ public class BlockInit {
 
     // Ores
 
-    public static final Block OVERWORLD_NAQUADAH_ORE = registerWithItem("overworld_naquadah_ore",
+    public static final Block NAQUADAH_ORE = registerWithItem("naquadah_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 6), Block.Settings
                     .create()
                     .strength(3F, 3F)

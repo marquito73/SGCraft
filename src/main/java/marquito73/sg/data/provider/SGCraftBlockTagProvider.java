@@ -20,7 +20,7 @@ public class SGCraftBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.STARGATE_RING)
                 .add(BlockInit.STARGATE_CHEVRON)
                 .add(BlockInit.STARGATE_BASE)
-                .add(BlockInit.OVERWORLD_NAQUADAH_ORE);
+                .add(BlockInit.NAQUADAH_ORE);
 
         this.getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(BlockInit.DEEPSLATE_NAQUADAH_ORE);
@@ -30,7 +30,7 @@ public class SGCraftBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.STARGATE_RING)
                 .add(BlockInit.STARGATE_CHEVRON)
                 .add(BlockInit.STARGATE_BASE)
-                .add(BlockInit.OVERWORLD_NAQUADAH_ORE)
+                .add(BlockInit.NAQUADAH_ORE)
                 .add(BlockInit.DEEPSLATE_NAQUADAH_ORE);
     }
 }

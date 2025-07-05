@@ -13,7 +13,7 @@ import net.minecraft.world.gen.feature.*;
 import java.util.List;
 
 public class ConfiguredFeatureInit {
-    public static final RegistryKey<ConfiguredFeature<?, ?>> OVERWORLD_NAQUADAH_ORE_KEY = registerKey(BlockInit.OVERWORLD_NAQUADAH_ORE.getTranslationKey());
+    public static final RegistryKey<ConfiguredFeature<?, ?>> NAQUADAH_ORE_KEY = registerKey(BlockInit.NAQUADAH_ORE.getTranslationKey());
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEEPSLATE_NAQUADAH_ORE_KEY = registerKey(BlockInit.DEEPSLATE_NAQUADAH_ORE.getTranslationKey());
 
 
@@ -22,11 +22,11 @@ public class ConfiguredFeatureInit {
         RuleTest deepslateOreReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreFeatureConfig.Target> overworldTargets = List.of(
-                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.OVERWORLD_NAQUADAH_ORE.getDefaultState()),
+                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.NAQUADAH_ORE.getDefaultState()),
                 OreFeatureConfig.createTarget(deepslateOreReplaceables, BlockInit.DEEPSLATE_NAQUADAH_ORE.getDefaultState())
         );
 
-        register(context, OVERWORLD_NAQUADAH_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTargets, 9));
+        register(context, NAQUADAH_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTargets, 9));
         register(context, DEEPSLATE_NAQUADAH_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTargets, 9));
     }
 
