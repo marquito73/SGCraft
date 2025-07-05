@@ -1,9 +1,9 @@
 package marquito73.sg.data.provider.languages;
 
 import marquito73.sg.SGCraft;
-import marquito73.sg.init.BlockInit;
+import marquito73.sg.init.SGCraftBlocks;
 import marquito73.sg.init.ItemGroupInit;
-import marquito73.sg.init.ItemInit;
+import marquito73.sg.init.SGCraftItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -33,28 +33,28 @@ public class SGCraftEnglishLanguageProvider extends FabricLanguageProvider {
         // Items
 
         // Naquadah
-        translationBuilder.add(ItemInit.NAQUADAH_INGOT, "Naquadah Ingot");
-        translationBuilder.add(ItemInit.NAQUADAH_RAW, "Naquadah Raw");
+        translationBuilder.add(SGCraftItems.NAQUADAH_INGOT, "Naquadah Ingot");
+        translationBuilder.add(SGCraftItems.NAQUADAH_RAW, "Naquadah Raw");
 
         // Crystal
-        translationBuilder.add(ItemInit.STARGATE_CORE_CRYSTAL, "Stargate Core Crystal");
-        translationBuilder.add(ItemInit.STARGATE_CONTROLLER_CRYSTAL, "Stargate Controller Crystal");
-        translationBuilder.add(ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL, "Pegasus Upgrade Cystal");
+        translationBuilder.add(SGCraftItems.STARGATE_CORE_CRYSTAL, "Stargate Core Crystal");
+        translationBuilder.add(SGCraftItems.STARGATE_CONTROLLER_CRYSTAL, "Stargate Controller Crystal");
+        translationBuilder.add(SGCraftItems.STARGATE_PEGASUS_UPGRADE_CRYSTAL, "Pegasus Upgrade Cystal");
 
         // Chevron upgade
-        translationBuilder.add(ItemInit.STARGATE_CHEVRON_UPGRADE, "Stargate Chevron Upgrade");
+        translationBuilder.add(SGCraftItems.STARGATE_CHEVRON_UPGRADE, "Stargate Chevron Upgrade");
 
         // Iris
-        translationBuilder.add(ItemInit.STARGATE_IRIS_BLADE, "Stargate Iris Blade");
-        translationBuilder.add(ItemInit.STARGATE_IRIS_UPGRADE, "Stargate Iris Upgrade");
+        translationBuilder.add(SGCraftItems.STARGATE_IRIS_BLADE, "Stargate Iris Blade");
+        translationBuilder.add(SGCraftItems.STARGATE_IRIS_UPGRADE, "Stargate Iris Upgrade");
 
 
         // Blocks
-        translationBuilder.add(BlockInit.NAQUADAH_BLOCK, "Block of Naquadah");
-        translationBuilder.add(BlockInit.NAQUADAH_ORE, "Naquadah Ore");
-        translationBuilder.add(BlockInit.DEEPSLATE_NAQUADAH_ORE, "Naquadah Deepslate Ore");
-        translationBuilder.add(BlockInit.STARGATE_RING, "Stargate Ring Block");
-        translationBuilder.add(BlockInit.STARGATE_CHEVRON, "Stargate Chevron Block");
-        translationBuilder.add(BlockInit.STARGATE_BASE, "Stargate Base Block");
+        translationBuilder.add(SGCraftBlocks.NAQUADAH_BLOCK, "Block of Naquadah");
+        translationBuilder.add(SGCraftBlocks.NAQUADAH_ORE, "Naquadah Ore");
+        translationBuilder.add(SGCraftBlocks.DEEPSLATE_NAQUADAH_ORE, "Naquadah Deepslate Ore");
+        translationBuilder.add(SGCraftBlocks.STARGATE_RING, "Stargate Ring Block");
+        translationBuilder.add(SGCraftBlocks.STARGATE_CHEVRON, "Stargate Chevron Block");
+        translationBuilder.add(SGCraftBlocks.STARGATE_BASE, "Stargate Base Block");
     }
 }

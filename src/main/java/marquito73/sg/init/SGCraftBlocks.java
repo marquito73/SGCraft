@@ -14,7 +14,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-public class BlockInit {
+public class SGCraftBlocks {
     public static final Block NAQUADAH_BLOCK = registerWithItem("naquadah_block", new Block(AbstractBlock.Settings
             .create()
             .strength(1.5F, 6.0F)
@@ -55,7 +55,7 @@ public class BlockInit {
     public static <T extends Block> T registerWithItem(String name, T block, Item.Settings settings) {
         T registered = register(name, block);
 
-        ItemInit.register(name, new BlockItem(registered, settings));
+        SGCraftItems.register(name, new BlockItem(registered, settings));
 
         return registered;
     }

@@ -1,7 +1,7 @@
 package marquito73.sg.data.provider;
 
-import marquito73.sg.init.BlockInit;
-import marquito73.sg.init.ItemInit;
+import marquito73.sg.init.SGCraftBlocks;
+import marquito73.sg.init.SGCraftItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -16,15 +16,15 @@ public class SGCraftBlockLootTableProvider extends FabricBlockLootTableProvider 
 
     @Override
     public void generate() {
-        this.addDrop(BlockInit.NAQUADAH_BLOCK);
-        this.addDrop(BlockInit.STARGATE_RING);
-        this.addDrop(BlockInit.STARGATE_CHEVRON);
-        this.addDrop(BlockInit.STARGATE_BASE);
+        this.addDrop(SGCraftBlocks.NAQUADAH_BLOCK);
+        this.addDrop(SGCraftBlocks.STARGATE_RING);
+        this.addDrop(SGCraftBlocks.STARGATE_CHEVRON);
+        this.addDrop(SGCraftBlocks.STARGATE_BASE);
 
-        this.addDrop(BlockInit.NAQUADAH_ORE,
-                this.oreDrops(BlockInit.NAQUADAH_ORE, ItemInit.NAQUADAH_RAW));
+        this.addDrop(SGCraftBlocks.NAQUADAH_ORE,
+                this.oreDrops(SGCraftBlocks.NAQUADAH_ORE, SGCraftItems.NAQUADAH_RAW));
 
-        this.addDrop(BlockInit.DEEPSLATE_NAQUADAH_ORE,
-                this.oreDrops(BlockInit.DEEPSLATE_NAQUADAH_ORE, ItemInit.NAQUADAH_RAW));
+        this.addDrop(SGCraftBlocks.DEEPSLATE_NAQUADAH_ORE,
+                this.oreDrops(SGCraftBlocks.DEEPSLATE_NAQUADAH_ORE, SGCraftItems.NAQUADAH_RAW));
     }
 }

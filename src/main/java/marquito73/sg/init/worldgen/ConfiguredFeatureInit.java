@@ -1,7 +1,7 @@
 package marquito73.sg.init.worldgen;
 
 import marquito73.sg.SGCraft;
-import marquito73.sg.init.BlockInit;
+import marquito73.sg.init.SGCraftBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -13,8 +13,8 @@ import net.minecraft.world.gen.feature.*;
 import java.util.List;
 
 public class ConfiguredFeatureInit {
-    public static final RegistryKey<ConfiguredFeature<?, ?>> NAQUADAH_ORE_KEY = registerKey(BlockInit.NAQUADAH_ORE.getTranslationKey());
-    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEPSLATE_NAQUADAH_ORE_KEY = registerKey(BlockInit.DEEPSLATE_NAQUADAH_ORE.getTranslationKey());
+    public static final RegistryKey<ConfiguredFeature<?, ?>> NAQUADAH_ORE_KEY = registerKey(SGCraftBlocks.NAQUADAH_ORE.getTranslationKey());
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEPSLATE_NAQUADAH_ORE_KEY = registerKey(SGCraftBlocks.DEEPSLATE_NAQUADAH_ORE.getTranslationKey());
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -22,8 +22,8 @@ public class ConfiguredFeatureInit {
         RuleTest deepslateOreReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreFeatureConfig.Target> overworldTargets = List.of(
-                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.NAQUADAH_ORE.getDefaultState()),
-                OreFeatureConfig.createTarget(deepslateOreReplaceables, BlockInit.DEEPSLATE_NAQUADAH_ORE.getDefaultState())
+                OreFeatureConfig.createTarget(stoneOreReplaceables, SGCraftBlocks.NAQUADAH_ORE.getDefaultState()),
+                OreFeatureConfig.createTarget(deepslateOreReplaceables, SGCraftBlocks.DEEPSLATE_NAQUADAH_ORE.getDefaultState())
         );
 
         register(context, NAQUADAH_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTargets, 9));

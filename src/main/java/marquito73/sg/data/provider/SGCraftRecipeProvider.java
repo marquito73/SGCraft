@@ -1,8 +1,8 @@
 package marquito73.sg.data.provider;
 
 import marquito73.sg.SGCraft;
-import marquito73.sg.init.BlockInit;
-import marquito73.sg.init.ItemInit;
+import marquito73.sg.init.SGCraftBlocks;
+import marquito73.sg.init.SGCraftItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
@@ -24,18 +24,18 @@ public class SGCraftRecipeProvider extends FabricRecipeProvider {
     public void generate(RecipeExporter exporter) {
         // Smelting
         offerSmelting(exporter,
-                List.of(ItemInit.NAQUADAH_RAW),
+                List.of(SGCraftItems.NAQUADAH_RAW),
                 RecipeCategory.MISC,
-                ItemInit.NAQUADAH_INGOT,
+                SGCraftItems.NAQUADAH_INGOT,
                 0.7f,
                 200,
                 "naquadah");
 
         // Blasting
         offerBlasting(exporter,
-                List.of(ItemInit.NAQUADAH_RAW),
+                List.of(SGCraftItems.NAQUADAH_RAW),
                 RecipeCategory.MISC,
-                ItemInit.NAQUADAH_INGOT,
+                SGCraftItems.NAQUADAH_INGOT,
                 0.7f,
                 100,
                 "naquadah");
@@ -45,62 +45,62 @@ public class SGCraftRecipeProvider extends FabricRecipeProvider {
 
     private void manageRecipes(RecipeExporter exporter) {
         // Naquadah
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlockInit.NAQUADAH_BLOCK)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, SGCraftBlocks.NAQUADAH_BLOCK)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .input('#', ItemInit.NAQUADAH_INGOT)
-                .criterion(FabricRecipeProvider.hasItem(ItemInit.NAQUADAH_INGOT),
-                        FabricRecipeProvider.conditionsFromItem(ItemInit.NAQUADAH_INGOT))
-                .offerTo(exporter, SGCraft.getID(BlockInit.NAQUADAH_BLOCK.getTranslationKey()));
+                .input('#', SGCraftItems.NAQUADAH_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(SGCraftItems.NAQUADAH_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(SGCraftItems.NAQUADAH_INGOT))
+                .offerTo(exporter, SGCraft.getID(SGCraftBlocks.NAQUADAH_BLOCK.getTranslationKey()));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ItemInit.NAQUADAH_INGOT, 9)
-                .input(BlockInit.NAQUADAH_BLOCK)
-                .criterion(FabricRecipeProvider.hasItem(BlockInit.NAQUADAH_BLOCK),
-                        FabricRecipeProvider.conditionsFromItem(BlockInit.NAQUADAH_BLOCK))
-                .offerTo(exporter, SGCraft.getID(ItemInit.NAQUADAH_INGOT.getTranslationKey()));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, SGCraftItems.NAQUADAH_INGOT, 9)
+                .input(SGCraftBlocks.NAQUADAH_BLOCK)
+                .criterion(FabricRecipeProvider.hasItem(SGCraftBlocks.NAQUADAH_BLOCK),
+                        FabricRecipeProvider.conditionsFromItem(SGCraftBlocks.NAQUADAH_BLOCK))
+                .offerTo(exporter, SGCraft.getID(SGCraftItems.NAQUADAH_INGOT.getTranslationKey()));
 
 
         // Pegasus upgrade crystal
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, SGCraftItems.STARGATE_PEGASUS_UPGRADE_CRYSTAL)
                 .pattern("GLG")
                 .pattern("RSR")
                 .pattern("GLG")
                 .input('G', Items.GLOWSTONE_DUST)
                 .input('L', Items.LAPIS_BLOCK)
                 .input('R', Items.REDSTONE)
-                .input('S', ItemInit.STARGATE_CORE_CRYSTAL)
+                .input('S', SGCraftItems.STARGATE_CORE_CRYSTAL)
                 .criterion(FabricRecipeProvider.hasItem(Items.GLOWSTONE_DUST),
                         FabricRecipeProvider.conditionsFromItem(Items.GLOWSTONE_DUST))
                 .criterion(FabricRecipeProvider.hasItem(Items.LAPIS_BLOCK),
                         FabricRecipeProvider.conditionsFromItem(Items.LAPIS_BLOCK))
                 .criterion(FabricRecipeProvider.hasItem(Items.REDSTONE),
                         FabricRecipeProvider.conditionsFromItem(Items.REDSTONE))
-                .criterion(FabricRecipeProvider.hasItem(ItemInit.STARGATE_CORE_CRYSTAL),
-                        FabricRecipeProvider.conditionsFromItem(ItemInit.STARGATE_CORE_CRYSTAL))
-                .offerTo(exporter, SGCraft.getID(ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL.getTranslationKey()));
+                .criterion(FabricRecipeProvider.hasItem(SGCraftItems.STARGATE_CORE_CRYSTAL),
+                        FabricRecipeProvider.conditionsFromItem(SGCraftItems.STARGATE_CORE_CRYSTAL))
+                .offerTo(exporter, SGCraft.getID(SGCraftItems.STARGATE_PEGASUS_UPGRADE_CRYSTAL.getTranslationKey()));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL, 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, SGCraftItems.STARGATE_PEGASUS_UPGRADE_CRYSTAL, 2)
                 .pattern("GLG")
                 .pattern("RSR")
                 .pattern("GLG")
                 .input('G', Items.GLOWSTONE_DUST)
                 .input('L', Items.LAPIS_BLOCK)
                 .input('R', Items.REDSTONE)
-                .input('S', ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL)
+                .input('S', SGCraftItems.STARGATE_PEGASUS_UPGRADE_CRYSTAL)
                 .criterion(FabricRecipeProvider.hasItem(Items.GLOWSTONE_DUST),
                         FabricRecipeProvider.conditionsFromItem(Items.GLOWSTONE_DUST))
                 .criterion(FabricRecipeProvider.hasItem(Items.LAPIS_BLOCK),
                         FabricRecipeProvider.conditionsFromItem(Items.LAPIS_BLOCK))
                 .criterion(FabricRecipeProvider.hasItem(Items.REDSTONE),
                         FabricRecipeProvider.conditionsFromItem(Items.REDSTONE))
-                .criterion(FabricRecipeProvider.hasItem(ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL),
-                        FabricRecipeProvider.conditionsFromItem(ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL))
-                .offerTo(exporter, SGCraft.getID(ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL.getTranslationKey() + "_2"));
+                .criterion(FabricRecipeProvider.hasItem(SGCraftItems.STARGATE_PEGASUS_UPGRADE_CRYSTAL),
+                        FabricRecipeProvider.conditionsFromItem(SGCraftItems.STARGATE_PEGASUS_UPGRADE_CRYSTAL))
+                .offerTo(exporter, SGCraft.getID(SGCraftItems.STARGATE_PEGASUS_UPGRADE_CRYSTAL.getTranslationKey() + "_2"));
 
 
         // Iris
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemInit.STARGATE_IRIS_BLADE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, SGCraftItems.STARGATE_IRIS_BLADE)
                 .pattern(" II")
                 .pattern("IC ")
                 .pattern("I  ")
@@ -110,18 +110,18 @@ public class SGCraftRecipeProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .criterion(FabricRecipeProvider.hasItem(Items.COAL),
                         FabricRecipeProvider.conditionsFromItem(Items.COAL))
-                .offerTo(exporter, SGCraft.getID(ItemInit.STARGATE_IRIS_BLADE.getTranslationKey()));
+                .offerTo(exporter, SGCraft.getID(SGCraftItems.STARGATE_IRIS_BLADE.getTranslationKey()));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemInit.STARGATE_IRIS_UPGRADE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, SGCraftItems.STARGATE_IRIS_UPGRADE)
                 .pattern("III")
                 .pattern("IRI")
                 .pattern("III")
-                .input('I', ItemInit.STARGATE_IRIS_BLADE)
+                .input('I', SGCraftItems.STARGATE_IRIS_BLADE)
                 .input('R', Items.REDSTONE)
-                .criterion(FabricRecipeProvider.hasItem(ItemInit.STARGATE_IRIS_BLADE),
-                        FabricRecipeProvider.conditionsFromItem(ItemInit.STARGATE_IRIS_BLADE))
+                .criterion(FabricRecipeProvider.hasItem(SGCraftItems.STARGATE_IRIS_BLADE),
+                        FabricRecipeProvider.conditionsFromItem(SGCraftItems.STARGATE_IRIS_BLADE))
                 .criterion(FabricRecipeProvider.hasItem(Items.REDSTONE),
                         FabricRecipeProvider.conditionsFromItem(Items.REDSTONE))
-                .offerTo(exporter, SGCraft.getID(ItemInit.STARGATE_IRIS_UPGRADE.getTranslationKey()));
+                .offerTo(exporter, SGCraft.getID(SGCraftItems.STARGATE_IRIS_UPGRADE.getTranslationKey()));
     }
 }

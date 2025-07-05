@@ -1,8 +1,8 @@
 package marquito73.sg.data.provider;
 
 import marquito73.sg.SGCraft;
-import marquito73.sg.init.BlockInit;
-import marquito73.sg.init.ItemInit;
+import marquito73.sg.init.SGCraftBlocks;
+import marquito73.sg.init.SGCraftItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
@@ -14,17 +14,17 @@ public class SGCraftModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.NAQUADAH_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(SGCraftBlocks.NAQUADAH_BLOCK);
 
         // Ores
 
-        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.NAQUADAH_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DEEPSLATE_NAQUADAH_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(SGCraftBlocks.NAQUADAH_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(SGCraftBlocks.DEEPSLATE_NAQUADAH_ORE);
 
         // Stargate
 
         // Stargate ring block
-        blockStateModelGenerator.registerCubeWithCustomTextures(BlockInit.STARGATE_RING, BlockInit.STARGATE_RING,
+        blockStateModelGenerator.registerCubeWithCustomTextures(SGCraftBlocks.STARGATE_RING, SGCraftBlocks.STARGATE_RING,
                 (block, source) -> TextureMap.of(TextureKey.PARTICLE, SGCraft.getID("block/stargate_block"))
                         .put(TextureKey.TOP, SGCraft.getID("block/stargate_block"))
                         .put(TextureKey.SIDE, SGCraft.getID("block/stargate_ring"))
@@ -33,7 +33,7 @@ public class SGCraftModelProvider extends FabricModelProvider {
                         .put(TextureKey.DOWN, SGCraft.getID("block/stargate_block"))
         );
         // Stargate chevron block
-        blockStateModelGenerator.registerCubeWithCustomTextures(BlockInit.STARGATE_CHEVRON, BlockInit.STARGATE_CHEVRON,
+        blockStateModelGenerator.registerCubeWithCustomTextures(SGCraftBlocks.STARGATE_CHEVRON, SGCraftBlocks.STARGATE_CHEVRON,
                 (block, source) -> TextureMap.of(TextureKey.PARTICLE, SGCraft.getID("block/stargate_block"))
                         .put(TextureKey.TOP, SGCraft.getID("block/stargate_block"))
                         .put(TextureKey.SIDE, SGCraft.getID("block/stargate_chevron"))
@@ -43,7 +43,7 @@ public class SGCraftModelProvider extends FabricModelProvider {
         );
         // Stargate base block
         // TODO Check how put a different texture on front of block
-        blockStateModelGenerator.registerCubeWithCustomTextures(BlockInit.STARGATE_BASE, BlockInit.STARGATE_BASE,
+        blockStateModelGenerator.registerCubeWithCustomTextures(SGCraftBlocks.STARGATE_BASE, SGCraftBlocks.STARGATE_BASE,
                 (block, source) -> TextureMap.of(TextureKey.PARTICLE, SGCraft.getID("block/stargate_block"))
                         .put(TextureKey.TOP, SGCraft.getID("block/stargate_block"))
                         .put(TextureKey.SIDE, SGCraft.getID("block/stargate_base"))
@@ -55,16 +55,16 @@ public class SGCraftModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ItemInit.NAQUADAH_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ItemInit.NAQUADAH_RAW, Models.GENERATED);
+        itemModelGenerator.register(SGCraftItems.NAQUADAH_INGOT, Models.GENERATED);
+        itemModelGenerator.register(SGCraftItems.NAQUADAH_RAW, Models.GENERATED);
 
-        itemModelGenerator.register(ItemInit.STARGATE_CORE_CRYSTAL, Models.GENERATED);
-        itemModelGenerator.register(ItemInit.STARGATE_CONTROLLER_CRYSTAL, Models.GENERATED);
-        itemModelGenerator.register(ItemInit.STARGATE_PEGASUS_UPGRADE_CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(SGCraftItems.STARGATE_CORE_CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(SGCraftItems.STARGATE_CONTROLLER_CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(SGCraftItems.STARGATE_PEGASUS_UPGRADE_CRYSTAL, Models.GENERATED);
 
-        itemModelGenerator.register(ItemInit.STARGATE_CHEVRON_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(SGCraftItems.STARGATE_CHEVRON_UPGRADE, Models.GENERATED);
 
-        itemModelGenerator.register(ItemInit.STARGATE_IRIS_BLADE, Models.GENERATED);
-        itemModelGenerator.register(ItemInit.STARGATE_IRIS_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(SGCraftItems.STARGATE_IRIS_BLADE, Models.GENERATED);
+        itemModelGenerator.register(SGCraftItems.STARGATE_IRIS_UPGRADE, Models.GENERATED);
     }
 }

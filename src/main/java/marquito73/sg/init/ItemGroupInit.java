@@ -14,7 +14,7 @@ public class ItemGroupInit {
 
     public static final ItemGroup STARGATE_GROUP = register("stargate_group", FabricItemGroup.builder()
             .displayName(STARGATE_TITLE)
-            .icon(ItemInit.NAQUADAH_INGOT::getDefaultStack)
+            .icon(SGCraftItems.NAQUADAH_INGOT::getDefaultStack)
             .entries((displayContext, entries) -> Registries.ITEM.getIds()
                     .stream()
                     .filter(key -> key.getNamespace().equals(SGCraft.MOD_ID))

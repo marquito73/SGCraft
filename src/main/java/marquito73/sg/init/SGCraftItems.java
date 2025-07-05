@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
-public class ItemInit {
+public class SGCraftItems {
     public static final Item NAQUADAH_INGOT = register("naquadah_ingot", new Item(new Item.Settings()));
     public static final Item NAQUADAH_RAW = register("naquadah_raw", new Item(new Item.Settings()));
     public static final Item STARGATE_CORE_CRYSTAL = register("stargate_core_crystal", new Item(new Item.Settings()));

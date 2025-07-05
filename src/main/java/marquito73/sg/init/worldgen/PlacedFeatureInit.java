@@ -2,7 +2,7 @@ package marquito73.sg.init.worldgen;
 
 import marquito73.sg.SGCraft;
 import marquito73.sg.common.Modifiers;
-import marquito73.sg.init.BlockInit;
+import marquito73.sg.init.SGCraftBlocks;
 import net.minecraft.registry.*;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.gen.YOffset;
@@ -13,8 +13,8 @@ import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import java.util.List;
 
 public class PlacedFeatureInit {
-    public static final RegistryKey<PlacedFeature> NAQUADAH_ORE_KEY = registerKey(BlockInit.NAQUADAH_ORE.getTranslationKey());
-    public static final RegistryKey<PlacedFeature> DEEPSLATE_NAQUADAH_ORE_KEY = registerKey(BlockInit.DEEPSLATE_NAQUADAH_ORE.getTranslationKey());
+    public static final RegistryKey<PlacedFeature> NAQUADAH_ORE_KEY = registerKey(SGCraftBlocks.NAQUADAH_ORE.getTranslationKey());
+    public static final RegistryKey<PlacedFeature> DEEPSLATE_NAQUADAH_ORE_KEY = registerKey(SGCraftBlocks.DEEPSLATE_NAQUADAH_ORE.getTranslationKey());
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);

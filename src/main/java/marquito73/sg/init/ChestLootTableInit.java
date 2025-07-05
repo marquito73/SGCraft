@@ -24,8 +24,8 @@ public class ChestLootTableInit {
         LootPool pool = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
                 .conditionally(RandomChanceLootCondition.builder(0.25f))
-                .with(ItemEntry.builder(ItemInit.STARGATE_CONTROLLER_CRYSTAL))
-                .with(ItemEntry.builder(ItemInit.STARGATE_CORE_CRYSTAL))
+                .with(ItemEntry.builder(SGCraftItems.STARGATE_CONTROLLER_CRYSTAL))
+                .with(ItemEntry.builder(SGCraftItems.STARGATE_CORE_CRYSTAL))
                 .build();
 
         if (LootTables.SIMPLE_DUNGEON_CHEST.equals(key) || LootTables.DESERT_PYRAMID_CHEST.equals(key)) {

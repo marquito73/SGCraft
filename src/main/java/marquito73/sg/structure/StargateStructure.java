@@ -1,7 +1,7 @@
 package marquito73.sg.structure;
 
 import marquito73.sg.blocks.*;
-import marquito73.sg.init.BlockInit;
+import marquito73.sg.init.SGCraftBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -59,9 +59,9 @@ public class StargateStructure extends CommonStructure {
 
                     char expectedChar = pattern[row].charAt(col);
                     Block expectedBlock = switch (expectedChar) {
-                        case 'C' -> BlockInit.STARGATE_CHEVRON;
-                        case 'R' -> BlockInit.STARGATE_RING;
-                        case 'B' -> BlockInit.STARGATE_BASE;
+                        case 'C' -> SGCraftBlocks.STARGATE_CHEVRON;
+                        case 'R' -> SGCraftBlocks.STARGATE_RING;
+                        case 'B' -> SGCraftBlocks.STARGATE_BASE;
                         default  -> Blocks.AIR;
                     };
 
