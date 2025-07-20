@@ -1,9 +1,6 @@
 package marquito73.sg;
 
-import marquito73.sg.init.SGCraftBlocks;
-import marquito73.sg.init.ChestLootTableInit;
-import marquito73.sg.init.ItemGroupInit;
-import marquito73.sg.init.SGCraftItems;
+import marquito73.sg.init.*;
 import marquito73.sg.init.worldgen.BiomeModificationInit;
 import net.fabricmc.api.ModInitializer;
 
@@ -23,6 +20,7 @@ public class SGCraft implements ModInitializer {
 		SGCraftItems.load();
 		ItemGroupInit.load();
 		SGCraftBlocks.load();
+		SGCraftBlockEntityTypes.load();
 		BiomeModificationInit.load();
 		ChestLootTableInit.load();
 

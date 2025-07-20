@@ -11,11 +11,18 @@ import net.minecraft.world.World;
 
 import java.util.*;
 
+/**
+ * Represent structure of a Stargate
+ */
 public class StargateStructure extends CommonStructure {
     private final int MAX_STRUCTURE_SIZE = 16;
     private final Direction[] planXY = { Direction.UP, Direction.DOWN, Direction.EAST, Direction.WEST };
     private final Direction[] planYZ = { Direction.UP, Direction.DOWN, Direction.NORTH, Direction.SOUTH };
     private BlockPos centerOfStructure = null;
+
+    /**
+     * Represent structure of a Stargate
+     */
     public StargateStructure(World world, BlockPos currentBlockPos) {
         super(world, currentBlockPos);
     }
@@ -27,13 +34,20 @@ public class StargateStructure extends CommonStructure {
      */
     @Override
     public Boolean structureIsValid() {
-        return this.validateStructureTest(Direction.Axis.Z, this.planXY) || this.validateStructureTest(Direction.Axis.X, this.planYZ);
+        return this.structureIsValid(Direction.Axis.Z, this.planXY) || this.structureIsValid(Direction.Axis.X, this.planYZ);
     }
 
-    private boolean validateStructureTest(Direction.Axis axis,  Direction[] plan) {
+    /**
+     * Check Stargate structure on plan
+     *
+     * @param axis Axis
+     * @param plan Axis plan
+     * @return The Stargate structure is valid
+     */
+    private boolean structureIsValid(Direction.Axis axis,  Direction[] plan) {
         boolean structureIsValid = true;
 
-        if (this.deepFirstSearch(this.world, this.currentBlockPos, this.currentBlockPos, null, new HashSet<>(), 0, plan)) {
+        if (this.deepFirstSearch(this.world, this.currentBlockPos, this.currentBlockPos, null, new HashSet<>(), 0, plan) && this.centerOfStructure != null) {
             // Planned structure : 5x5
             // Legend
             // C : Chevron Block
@@ -93,6 +107,18 @@ public class StargateStructure extends CommonStructure {
         return structureIsValid;
     }
 
+    /**
+     * Search for block structure
+     *
+     * @param world The minecraft world
+     * @param current Current block position
+     * @param origin Origin block position
+     * @param cameFrom From which direction came
+     * @param visited Block positions already visited
+     * @param depth Depth
+     * @param validDirections Valid directions
+     * @return Block structure is valid
+     */
     private boolean deepFirstSearch(World world, BlockPos current, BlockPos origin, Direction cameFrom,
                                     Set<BlockPos> visited, int depth, Direction[] validDirections) {
         if (depth > MAX_STRUCTURE_SIZE) {

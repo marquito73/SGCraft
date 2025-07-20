@@ -14,6 +14,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
+/**
+ * Registers all blocks
+ */
 public class SGCraftBlocks {
     public static final Block NAQUADAH_BLOCK = registerWithItem("naquadah_block", new Block(AbstractBlock.Settings
             .create()
