@@ -1,9 +1,11 @@
 package marquito73.sg;
 
+import marquito73.sg.entity.StargateBaseBlockEntity;
 import marquito73.sg.init.*;
 import marquito73.sg.init.worldgen.BiomeModificationInit;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +25,9 @@ public class SGCraft implements ModInitializer {
 		SGCraftBlockEntityTypes.load();
 		BiomeModificationInit.load();
 		ChestLootTableInit.load();
+		SGCraftScreenHandlerTypes.load();
+
+		ItemStorage.SIDED.registerForBlockEntity(StargateBaseBlockEntity::getInventoryProvider, SGCraftBlockEntityTypes.STARGATE);
 
 		LOGGER.info("Mod " + MOD_ID + " loaded !");
 	}

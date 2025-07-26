@@ -1,6 +1,7 @@
 package marquito73.sg.data.provider.languages;
 
 import marquito73.sg.SGCraft;
+import marquito73.sg.entity.StargateBaseBlockEntity;
 import marquito73.sg.init.SGCraftBlocks;
 import marquito73.sg.init.ItemGroupInit;
 import marquito73.sg.init.SGCraftItems;
@@ -56,5 +57,7 @@ public class SGCraftEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(SGCraftBlocks.STARGATE_RING, "Stargate Ring Block");
         translationBuilder.add(SGCraftBlocks.STARGATE_CHEVRON, "Stargate Chevron Block");
         translationBuilder.add(SGCraftBlocks.STARGATE_BASE, "Stargate Base Block");
+
+        this.addText(translationBuilder, StargateBaseBlockEntity.TITLE, "Stargate base");
     }
 }

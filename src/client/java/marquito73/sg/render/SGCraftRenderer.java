@@ -59,6 +59,8 @@ public abstract class SGCraftRenderer<TBlockEntity extends SGCraftBlockEntity> i
 
                     matrices.pop();
                 });
+
+                this.renderStructureBlocks(entity, matrices, vertexConsumers, this.getMaxLightAround(entity), overlay);
             }
         } else {
             entity.setVisible(true);
@@ -103,4 +105,15 @@ public abstract class SGCraftRenderer<TBlockEntity extends SGCraftBlockEntity> i
      * @param overlay Overlay
      */
     protected abstract void renderPart(String partKey, SGCraftModel part, TBlockEntity entity, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay);
+
+    /**
+     * Render structure blocks
+     *
+     * @param entity The entity block
+     * @param matrices Matrices
+     * @param vertexConsumers Consumer
+     * @param light The light around the block
+     * @param overlay Overlay
+     */
+    protected abstract void renderStructureBlocks(TBlockEntity entity, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay);
 }
