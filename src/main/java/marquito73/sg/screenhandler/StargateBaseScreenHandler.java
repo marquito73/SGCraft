@@ -59,7 +59,7 @@ public class StargateBaseScreenHandler extends SGCraftScreenHandler<StargateBase
      */
     private void addStargateBaseInventory(SimpleInventory inventory) {
         for (int column = 0; column < 5; column++) {
-            this.addSlot(new OneBlockOnlySlot(inventory, column, 8 + (column * 18), 54));
+            this.addSlot(new OneBlockOnlySlot(inventory, column, 8 + (column * 18), 52));
         }
     }
 

@@ -20,7 +20,7 @@ public class StargateBaseScreen extends SGCraftScreen<StargateBaseBlockEntity, S
      * @param title The screen title
      */
     public StargateBaseScreen(StargateBaseScreenHandler handler, PlayerInventory inventory, Text title) {
-        super(handler, inventory, title, SGCraft.getID("textures/gui/stargate_base_gui.png"));
+        super(handler, inventory, title, SGCraft.getID("textures/gui/stargate_base.png"));
     }
 
     @Override
